@@ -1,0 +1,6 @@
+archive/
+db.sqlite3
+venv/
+*.xlsx
+*.png
+__pycache__/

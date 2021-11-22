@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Текущие портфели{% endblock %}
+{% block header %}Текущие портфели{% endblock %}
+{% block content %}
+
+    {% load cache %}
+    {% cache 20 index_page %}
+    
+        {% for portfolio in portfolios %}
+            {% include "portfolio_info.html" %}
+        {% if not forloop.last %}<hr>{% endif %}
+        {% endfor %}
+
+    {% endcache %}  
+
+
+{% endblock %}
